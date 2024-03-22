@@ -1,0 +1,53 @@
+.home{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-family: "K2D", sans-serif;
+        background-size: cover;    
+        /* background-repeat: no-repeat; */
+        background-position: right;
+        color: antiquewhite;
+        margin: 0;
+        font-size: 32px;
+        letter-spacing: 1px;
+        
+}
+
+.header h1{
+    display: flex;
+    /* justify-content: center; */
+    padding-left:120px ;
+    /* text-decoration:underline; */
+    font-size: 80px ;
+    padding-top: 20px; 
+    margin: 0;
+    font-weight: 500;
+}
+.skill_list{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    justify-content: flex-start;
+    height: 100%;
+    min-width: 100%;
+    align-items: center;
+    /* gap:200px; */
+    list-style-type: none;
+    font-weight:100 ;
+}
+
+.list1{
+    min-width:50%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding-left: 100px;
+    
+}
+.list2{
+    width:50%;
+    /* padding-left: 20px; */
+}
+
