@@ -12,7 +12,7 @@ import certificate7 from '../images/certificates/certificate7.jpg';
 const Project = () => {
   return (
     
-        <div className={projects.home} 
+        <div className={projects.home} id="project_section"
             //   style = {{ backgroundImage: `url(${backglow2})` }}
               >
             <div className={projects.header}>
@@ -81,7 +81,7 @@ const Project = () => {
              </div>
          </div>
 
-    </div>
+        </div>
   )
 }
 

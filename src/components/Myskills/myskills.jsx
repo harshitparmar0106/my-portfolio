@@ -3,7 +3,7 @@ import skill from "./myskills.module.css";
 
 const myskills = () => {
   return (
-    <div className={skill.home}>
+    <div className={skill.home} id = "skills_section">
       <div className={skill.header}>Skills</div>
       <div className={skill.skill_container}>
         <Skill label = {"HTML"} percent = {"90%"}/>

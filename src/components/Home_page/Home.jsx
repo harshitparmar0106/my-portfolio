@@ -55,7 +55,7 @@ const Home = () =>  {
                 <a href="https://www.linkedin.com/in/harshit-parmar99/">
                   <img src={linkedin} alt="" />
                 </a>
-                <a href="https://github.com/harshitparmar0106">
+                <a href="https://www.instagram.com/invites/contact/?i=1f3fekkh3w0ur&utm_content=dhqhu58">
                   <img src={insta} alt="" />
                 </a>
                 <a href="https://linktr.ee/harshithacks">
