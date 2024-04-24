@@ -1,44 +1,30 @@
-import backglow2 from '../images/backglow2.png';
-import skill from  './myskills.module.css';
-import loader from '../images/Group 1.png';
+import backglow2 from "../images/backglow2.png";
+import skill from "./myskills.module.css";
 
-const myskills = ()=> {
+const myskills = () => {
+  return (
+    <div className={skill.home}>
+      <div className={skill.header}>Skills</div>
+      <div className={skill.skill_container}>
+        <Skill label = {"HTML"} percent = {"90%"}/>
+        <Skill label = {"CSS"} percent = {"80%"}/>
+        <Skill label = {"JAVA SCRIPT"} percent = {"60%"}/>
+        <Skill label = {"React JS"} percent = {"50%"}/>
+        <Skill label = {"C++"} percent = {"80%"}/>
+        <Skill label = {"PYTHON"} percent = {"60%"}/>
+      </div>
+    </div>
+  ); 
+};
 
-    return(
-        <div>
-             <div className={skill.home} 
-              style = {{ backgroundImage: `url(${backglow2})` }}>
-
-                <div className= {skill.header}>
-                    <h1>My Skills</h1>
-                </div>
-                <div className={skill.skill_list}>
-                    <div className={skill.list1}>
-                        <div className= {skill.skill_loader}>
-
-                            <li>HTML<br />
-                            <br />
-                            <img src={loader} />
-                             </li>
-                        </div>
-                        <li>CSS<br />
-                        <br /></li>
-                        <li>JAVA SCRIPT<br />
-                        <br /></li>
-                    </div>
-                    <div className={skill.list2}>
-                        <li>REACT JS <br />
-                        <br /></li>
-                        <li>C++<br />
-                        <br /></li>
-                        <li>PYTHON<br />
-                        <br /></li>
-                    </div>
-                </div>
-             </div>
-        </div>
-
-    );
-}
-
+const Skill = (props) => {
+  return (
+    <div className={skill.wrapper}>
+      <p>{props.label}</p>
+      <div className={skill.progress_bar}>
+        <div style={{width: props.percent}} className={skill.progress}></div>
+      </div>
+    </div>
+  );
+};
 export default myskills;

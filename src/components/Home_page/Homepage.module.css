@@ -11,9 +11,7 @@
     font-style: normal;
     
 }
-.backglow{
-    
-}
+
 .navbar{
     width: 90%;
     display: flex;
@@ -25,7 +23,6 @@
     justify-content: space-between;
     padding: 20px;
     box-shadow: 0 0 20px 0 rgb(238, 0, 255);
-    
 }
 .navbar p{
     font-weight: 700;
@@ -54,10 +51,7 @@
     background-color: #c701cbad;
     width: auto;
     position: relative;
-
-    
-    /*padding: 0 8px;
-     */
+    box-shadow: 0 0 20px 0 rgb(34, 3, 44);
     border-radius: 50px;
     transition: 500ms;
  }
@@ -88,8 +82,11 @@
     margin: 0;
     font-size: 70px;
 
+    text-emphasis-color : 0 0 20px 0 rgb(157, 0, 255);
 }
-.description{
+
+
+.animated-text{
     display: flex;
     width: 100%;
     /* background-color: aqua; */
@@ -129,6 +126,10 @@
     background-color:#E019E4;
 
 }
+
+.Resume:focus{
+    background-color: #8c0a8f;
+}
 .Resume_btn {
     /* background-color: red; */
     align-self: flex-start;
@@ -142,4 +143,240 @@
     border-radius: 50%;
     margin:15px;
     background-color: #ed84efbd;
+}
+
+.animated_text{
+    font-size: 24px;
+    font-weight: 300;
+    min-width: 280px;
+    color: aliceblue;
+}
+
+.animated_text span{
+    position: relative;
+}
+
+.animated_text span::before{
+    content: "Youtuber";
+    color: #E019E4;
+    animation: words 20s infinite;
+}
+
+.animated_text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #120720;
+    border-left: 2px solid #E019E4;
+    right: -8px;
+    animation: cursor 3s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #ff7f5000;
+    }
+}
+
+@keyframes words {
+    0%,20%{
+        content: "Web Devloper";
+    }
+    21%,40%{
+        content: "UAV Pilot";
+    }
+    41%,60%{
+        content: "Problem Solver";
+    }
+    61%,80%{
+        content: "Cyber Security Enthusiast";
+    }
+    81%,100%{
+        content: "Traveler";
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+.nav_icon{
+    display: none;
+}
+.mobile{
+    display: none;
+}
+
+@media screen and (max-width:420px) {
+    .home{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        background-color: #120720;
+        align-items: center;
+        font-family: "K2D", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+       align-items: center;
+    }
+    .navbar{
+        display: none;
+        flex-direction: column;
+        box-shadow: none;
+        background-color: transparent;
+        align-items: flex-end;
+    }
+
+    .navbar p{
+        display: none;
+    }
+
+    .navbar ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        font-weight: 300;
+        list-style-type: none;
+        gap:55px; 
+        
+    }
+    .navbar ul a{
+        display: none;
+        color: aliceblue;
+        align-items: flex-end;
+        text-decoration: none;
+    
+    }
+    .navbar ul a:hover{
+        height: 100%;
+        top: 0;
+        background-color: #c701cbad;
+        width: auto;
+        position: relative;
+        box-shadow: 0 0 20px 0 rgb(34, 3, 44);
+        border-radius: 50px;
+        transition: 500ms;
+     }
+    
+
+
+
+
+
+     .herosection{
+         margin: 0;
+         left: 0;
+         height: 100vh;
+         width: 100%;
+        display: flex;
+        flex: 1 1 100%;
+        align-items: center;
+        color: #f5deb3;
+        background-size: cover;
+        background-position: center;
+        align-items: flex-start;
+    }
+    .herosection_content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 0 20px;
+    }
+    .Front_name{
+        font-weight: 600;
+        color: aliceblue;
+        width: 100%;
+        padding: 100px 0 0 0;
+    }
+    .social_icons {
+        align-items: flex-end;
+        padding: 0;
+        margin-top: 0px;
+    }
+    .Front_name p{
+        margin: 0;
+        font-size: 55px;
+        font-weight: normal;
+        justify-content: flex-start;
+    } 
+    .animated_text{
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .nav_icon{
+      display: flex;
+      font-size: 48px;
+      color: aliceblue;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+    
+    .mobile_nav{
+        position: fixed;
+        background-color: #120720;
+        left: 0;
+        top:0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        cursor: pointer;
+        transition: 3s ease-in-out;
+    }
+    
+    .mobile_nav ul{
+        list-style-type:none ;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+    .mobile_nav a{
+        color: aliceblue;
+        text-decoration: none;
+        margin-top: 20px;
+        font-size: 18px;
+        padding: 10px 10px;
+    }
+    .mobile_nav ul a:hover{
+       background-color: #8c0a8f;
+
+     }
+     .Resume {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: transparent;
+        border-style: none;
+        margin: 10px;
+        background-color:#E019E4;
+        font-family: "K2D", sans-serif;
+        font-size: 18px;
+        color: aliceblue;
+    
+    }
+    
+    .Resume:focus{
+        background-color: #8c0a8f;
+    }
+    .Resume_btn {
+        /* background-color: red; */
+        align-self: flex-start;
+        border-radius:50% ;
+        background-color:#fd73ff9a;
+        position: absolute;
+        top:120%;
+        right:40%;
+    }
+    .wrapper{
+        border-radius: 50%;
+        margin:15px;
+        background-color: #ed84efbd;
+    }
+    
+    
 }
