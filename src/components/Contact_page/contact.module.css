@@ -104,7 +104,7 @@
 
 }
 
-.Address_Container{
+.Address_detail{
     width:250px;
     background-color:#1207206e;
     display: flex;
@@ -118,12 +118,12 @@
     /* margin-bottom: 30px; */
 }
 
-.Address_Container h3{
+.Address_detail h3{
     margin: 0;
     padding: 0;
     font-weight: 400;
 }
-.Address_Container p{
+.Address_detail p{
     font-size: 14px;
     font-weight: 100;
 }
@@ -152,11 +152,11 @@
         margin: 0;
         min-height: 100vh;
         background-color:#120720 ;
-       
         color: #f0f8ff;
         display: flex;
         flex-direction: column;
         font-family: "K2D", sans-serif;
+        align-items: center;
         
     }
     
@@ -170,11 +170,6 @@
     padding: 20px 0;
     
 }
-
-
-
-
-
 .contact_header{
     margin: 0;
     padding: 0;
@@ -189,11 +184,11 @@
 .game_container{
     display: none;
 }
-.Address_Container{
-    width:250px;
+.Address_detail{
+    width:300px;
     background-color:#120720b7;
     display: flex;
-    margin: 30px 60px;
+    margin: 30px 30px;
     padding: 0;
     border-radius: 25px;
     height: 190px;
@@ -201,21 +196,21 @@
     /* margin-bottom: 30px; */
 }
 
-.Address_Container h3{
+.Address_detail h3{
     /* display: none; */
     margin: 20px 0 0 20px;
     padding: 0;
     font-weight: 400;
 }
-.Address_Container p{
+.Address_detail p{
     /* display: none; */
-    margin: 5px 0 20px 20px ;
-    font-size: 14px;
-    font-weight: 100;
+    margin: 15px 0 20px 20px ;
+    font-size: 16px;
+    font-weight: 200;
 }
 #arrow{
 
-    left: 5%;
+    left: -50%;
     width: 60px;
     position: absolute;
     top:50%;

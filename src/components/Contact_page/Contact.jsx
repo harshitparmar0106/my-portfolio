@@ -75,17 +75,17 @@ const Contact = () => {
         </div>
         <div className={contact.address_container}>
 
-        <div className={contact.game_container}>
-          <p>Lets Play Game</p>
-          {/* <Game/> */}
+            <div className={contact.game_container}>
+            <p>Lets Play Game</p>
+            {/* <Game/> */}
 
-        </div>
-        <div className={contact.Address_Container}>
-            <h3>Address:-</h3>
+            </div>
+            <div className={contact.Address_detail}>
+                <h3>Address:-</h3>
 
-            <p>Poornima college Of Engineering,<br />ISI-6,Sitapura,Jaipur,<br />Rajasthan(302022)</p>
+                <p>Poornima college Of Engineering,<br />ISI-6,Sitapura,Jaipur,<br />Rajasthan(302022)</p>
 
-        </div>
+            </div>
         </div>
 
         </div>
