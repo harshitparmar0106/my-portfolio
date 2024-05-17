@@ -1,14 +1,12 @@
 .home{
-        /* height:300vh ; */
         width: 100%;
         background-color: #120720;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: right top left;
-        font-family: "K2D", sans-serif;
-        
-            
+        font-family: "K2D", sans-serif;        
 }
+
 .header{
     height: 72px;
     color: aliceblue;
@@ -19,6 +17,7 @@
     font-weight: 400;
     
 }
+
 .head_container{
     display: flex;
     flex-direction: column;
@@ -31,80 +30,55 @@
     justify-content: space-evenly;
     gap:50px;
     padding: 20px 70px;
-
 }
-.project_frame{
+
+.project_frame {
     width:calc(33.333333% - 120px);
     height: 230px;
-    /* background-color:#1207206e; */
-    /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     border-radius: 25px;
-    box-shadow: 0 0 20px 0 rgb(238, 0, 255);
-     border: 10px solid #120720;
+    border: 1px solid #ee00ff;
 }
-
-.project_frame img:hover #desc{
-     display: none;
-    border: 3px solid #120720;
-    color: aqua;
+.project_frame:hover{
+     box-shadow: 0 0 20px 0 #ee00ff;
+     cursor: pointer;
 
 }
-
 .certificate > p{
     height: 72px;
     color: aliceblue;
     display: flex;
     font-size: 80px;
-    /* padding-top: 20PX; */
-    /* padding-left: 120px; */
     font-weight: 400;
     margin: 80px;
 
 }
+
 .certificate_container{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    /* background-color: red; */
-    /* flex-grow: 33.33%; */
     padding: 20px 70px;
     gap:50px;
-
 }
 
 .project_frame img {
     width:100%;
-    height: 100%;
-    border-radius: 15px;
+    height: 90%;
+    /* border-radius: 25px; */
     position: absolute;
-    /* display: block; */
     aspect-ratio: 1 / 1;
-    object-fit: contain;
-    object-position: center;
-    
-   
-
+    object-fit:contain;
+    object-position:center;  
+    padding: 5px;
+    border: none;
+    top:10px;
+    left:0px;
 }
 
-.project_frame p{
-    position: absolute;
-    font-size: 16px;
-    background-color: rgba(245, 245, 220, 0.483);
-    color: black;
-    width: 100%;
-    /* height: 100%; */
-    bottom: 0;
-    /* background-color: red; */
-    text-align: justify;
-    border-radius: 0 0 15px 15px;
-    line-height: 15px;
-    display: block;
-    
-}
 
 .project_frame:nth-child(1) img{
     rotate: -90deg;
@@ -112,77 +86,42 @@
 .project_frame:nth-child(2) img{
     rotate: -90deg;
 }
-.content{
-    width:calc(100% + 10px) ;
-    height:100%;
-    top:0;
-    left:0;
-    position: absolute;
-    background:#120720;
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0 25px 25px 25px;
-    opacity: 1;
-    transition: 0.3s;
-    
-}
-.content:hover{
-    opacity: 1;
-    transform: translateY(10px);
-}
-.content{
-    font-size: 18px;
-    font-weight: 300;
-    color: aliceblue;
+.project_frame:nth-child(3) img{
+    rotate: -90deg;
 }
 
 .project{
     width: calc(33.33% - 120px);
     position: relative;
-    
-    /* background-color: red; */
     border: 3px solid #120720;
     box-shadow: 0 0 20px 0 rgb(238, 0, 255);
     border-radius: 25px;
-    
+}
 
-}
-.project p {
-    background: red;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    opacity: 0;
-    transition: .25s;
-}
 .project img{
     position: absolute;
     width:100%;
     height: 100%;
     border-radius: 25px;
     position: absolute;
-    /* display: block; */
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1;    
     object-fit: contain;
     object-position: center;
+}
+.project_frame p{
+    color: aliceblue;
+    padding-top: 150px;
+    font-size: 20px;
+}
+#name{
+    text-decoration: none;
+}
 
+.project_container:nth-child(1) img{
+    rotate: 0deg;
 }
-.project p:hover{
-    opacity: 1;
-    transform: translateY(10px);
-}
-.project:nth-child(1) img{
-    rotate: -90deg;
-}
-.project_frame:nth-child(1){
+
+.project_frame:nth-child(3){
     rotate: 90deg;
 }
 
@@ -252,11 +191,12 @@
     display: none;
 }
 .project_frame:nth-child(1){
-    rotate: 90deg;
+    rotate: 0deg;
 }
 .project_frame:nth-child(3){
-    rotate: -90deg;
-}
+    rotate: 90deg;
+
+}   
  
 }
     

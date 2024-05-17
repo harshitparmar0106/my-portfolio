@@ -4,35 +4,54 @@ import bcg from '../images/contactbcg.png';
 import { useState } from 'react';
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-// import Game from '../Contact_page/game.jsx';
+import Game from './Tictactoe.jsx';
+import Tictactoe from './Tictactoe.jsx';
 
 
 
 const Contact = () => {
 
-    const [user_name, setName] = useState("");
-    const [contact1, setNum] = useState("");
-    const [user_email, setEmail] = useState("");
-    const [msg, setMsg] = useState("");
+    // const [user_name, setName] = useState("");
+    // const [contact1, setNum] = useState("");
+    // const [user_email, setEmail] = useState("");
+    // const [msg, setMsg] = useState("");
 
-    const form = useRef();
+    const[formData,setFormData] = useState({fullname:"",email:"",contact:"",message:""});
+    // console.log(formData);
+    function changeHandler(e){
+        setFormData(prevFormData=>{
+            return{
+                ...prevFormData,
+                [e.target.name]:e.target.value
+            }
+            
+        });
+    }
 
-    const sendEmail = (e) => {
-      e.preventDefault();
+    function submitHandler(event){
+        // event.prventDefault();
+        console.log("printing data");
+        console.log(formData);        
+    }
+
+    // const form = useRef();
+
+    // const sendEmail = (e) => {
+    //   e.preventDefault();
   
-      emailjs
-        .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
-          publicKey: 'YOUR_PUBLIC_KEY',
-        })
-        .then(
-          () => {
-            console.log('SUCCESS!');
-          },
-          (error) => {
-            console.log('FAILED...', error.text);
-          },
-        );
-    };
+    //   emailjs
+    //     .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+    //       publicKey: 'YOUR_PUBLIC_KEY',
+    //     })
+    //     .then(
+    //       () => {
+    //         console.log('SUCCESS!');
+    //       },
+    //       (error) => {
+    //         console.log('FAILED...', error.text);
+    //       },
+    //     );
+    // };
 
     
   return (
@@ -47,38 +66,58 @@ const Contact = () => {
         style = {{backgroundImage: `url(${bcg})`}}>
 
 
-        <div className={contact.form}>
+        <form className={contact.form} onSubmit={submitHandler}>
             
             <div className={contact.input_field}>
                 <p>Name:</p>
-                <input value={user_name} onChange={(e) => setName(e.target.value)} type="text" placeholder='Enter your name'/>
+                <input  
+                onChange={changeHandler} 
+                type="text" 
+                placeholder='Enter your name'
+                name="fullname"
+                value = {formData.name}
+                 />
             </div>
             <div className={contact.input_field}>
 
                 <p>E-Mail</p>
-                <input value={user_email} type="email" placeholder='abc@gmail.com' onChange={(e)=>setEmail(e.target.value)} />
+                <input type="email"
+                 placeholder='abc@gmail.com'
+                  onChange={changeHandler} 
+                   name = "email"
+                value = {formData.email}
+                />
             </div>
 
             <div className={contact.input_field}>
                 <p>Contact No.</p>
-                <input value ={contact1} type='tel' placeholder='90******7'onChange={(e)=> setNum(e.target.value)}/>
+                <input type='tel'
+                 placeholder='90******7'
+                 onChange={changeHandler}
+                 name="contact"
+                value = {formData.contact}
+                />
             </div>
 
             <div className={contact.input_field}>
                 <p>Message</p>
-                <textarea value ={msg} placeholder='enter the message..' onChange={(e)=>setMsg(e.target.value)}></textarea>
+                <textarea placeholder='enter the message..'
+                 onChange={changeHandler} 
+                 name="message"
+                value = {formData.message}
+                 
+                 ></textarea>
             </div>
             <div className={contact.input_field}>
-                <button ref ={form} onSubmit={sendEmail}>Submit</button>
+                <button>Submit</button>
             </div>
             
-        </div>
+        </form>
         <div className={contact.address_container}>
 
             <div className={contact.game_container}>
             <p>Lets Play Game</p>
-            {/* <Game/> */}
-
+            <Tictactoe/>
             </div>
             <div className={contact.Address_detail}>
                 <h3>Address:-</h3>

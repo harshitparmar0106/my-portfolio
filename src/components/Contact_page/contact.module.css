@@ -84,9 +84,13 @@
     align-self: center;
     border-radius: 50px;
     border: none;
-    background-color:#120720;
-    box-shadow: 0 0 20px 0 rgb(238, 0, 255);
+    background-color:#3d0587ed;
+    /* box-shadow: 0 0 20px 0 rgb(238, 0, 255); */
     color: aliceblue;
+}
+.input_field button:hover{
+    box-shadow: 0 0 20px 0 #ee00ff;
+
 }
 .input_field input,.input_field textarea{
     width: 250px;
@@ -145,6 +149,9 @@
     padding: 0;
     color: aliceblue;
    font-weight: 700;
+   padding-bottom: 10px;
+   padding-left: 22px;
+
 }
 @media screen and (max-width:420px) {
     
@@ -184,6 +191,7 @@
 .game_container{
     display: none;
 }
+
 .Address_detail{
     width:300px;
     background-color:#120720b7;

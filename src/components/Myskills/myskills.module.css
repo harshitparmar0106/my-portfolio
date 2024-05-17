@@ -47,9 +47,14 @@
 .progress_bar{
     flex:0.7;
     height: 25px;
-    box-shadow: 0 0 10px 0 rgb(238, 0, 255);
+    /* box-shadow: 0 0 10px 0 #ee00ff; */
     border-radius: 50px;
+    border: 1px solid #ee00ff;;
    
+}
+.progress_bar:hover{
+    box-shadow: 0 0 10px 0 #ee00ff;
+
 }
 .progress{
     height: 100%;
